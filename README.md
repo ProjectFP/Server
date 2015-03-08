@@ -4,5 +4,6 @@ tesseract
 https://www.npmjs.com/package/node-tesseract
 
 Need this command to install canvas.js
-https://raw.githubusercontent.com/LearnBoost/node-canvas/master/install -O - | sh
+
+wget https://raw.githubusercontent.com/LearnBoost/node-canvas/master/install -O - | sh
 
