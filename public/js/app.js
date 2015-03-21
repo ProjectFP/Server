@@ -39,11 +39,19 @@
 			.then(function(){
 				Caman(filteredId, function applyFilters(){
 					this.reloadCanvasData();
-					this.brightness(0);
+					// this.brightness(0);
 
 					// Add your custom filter here
-					this.custom();
-					this.render(sendFilteredCanvas);
+					// this.custom();
+					var currentMin = {};
+				    var currentMax = {};
+				    var bhash = {};
+					this.findMinMax(currentMin, currentMax);
+					this.render(function(){
+						console.log(currentMin, currentMax);
+						this.filterByMaxMin(currentMin, currentMax, 50, bhash);
+						this.render(sendFilteredCanvas);
+					});
 				});
 			});
 		}
