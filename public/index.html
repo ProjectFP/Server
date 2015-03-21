@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Camanjs Filter Playground</title>
+	<script src='bower_components/caman/dist/caman.full.js'></script>
+	<script src='bower_components/jquery/dist/jquery.js'></script>
+	<script src='js/filters.js'></script>	
+	<script src='js/app.js'></script>
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+<body>
+	<div class='file-input'>	
+		<label for='file-input'>Choose Another Image:</label>
+		<input type='file'/ id='file-input'>
+	</div>
+	
+	<div class="results">
+		<span class='result-label'>Tesseract Output: </span>
+		<span class='result'></span>
+	</div>
+
+	<figure class='original'>	
+		<h2>Original Image</h2>
+		<canvas id='original-image'></canvas>
+	</figure>
+
+	<figure class='filered'>	
+		<h2>Image with Filters Applied</h2>
+		<canvas id='filtered-image'></canvas>
+	</figure>
+</body>
+</html>

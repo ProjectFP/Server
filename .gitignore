@@ -3,3 +3,4 @@ uploads
 tessdata
 **/.DS_Store
 build
+public/bower_components
