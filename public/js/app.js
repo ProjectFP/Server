@@ -39,7 +39,7 @@
 			.then(function(){
 				Caman(filteredId, function applyFilters(){
 					this.reloadCanvasData();
-					this.brightness(90);
+					this.brightness(0);
 
 					// Add your custom filter here
 					this.custom();
@@ -99,6 +99,8 @@
 				$body = $('body');
 				nonNumberRegex = /[^0-9]/g;
 
+				removeAllClasses();
+
 				result = data.text.trim();
 				$('.result').text(result);
 
@@ -110,6 +112,12 @@
 
 				} else {
 					$body.addClass('success');
+				}
+
+				function removeAllClasses() {
+					$body.removeClass('fail');
+					$body.removeClass('semi-success');
+					$body.removeClass('success');
 				}
 			}
 		}
