@@ -56,7 +56,7 @@
           currentMax.g = 1;
           currentMax.b = 1;
 
-          currentMin.h = 1;ß
+          currentMin.h = 1;
           currentMin.s = 1;
           currentMin.l = 1;
 
