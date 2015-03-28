@@ -46,10 +46,13 @@
 					var currentMin = {};
 				    var currentMax = {};
 				    var bhash = {};
-					this.findMinMax(currentMin, currentMax);
+					this.findMinMax(currentMin, currentMax, true, true);
 					this.render(function(){
 						console.log(currentMin, currentMax);
 						this.filterByMaxMin(currentMin, currentMax, 50, bhash);
+						// this.filterByMaxMinRGB(currentMin, currentMax, 50);
+						// this.filterByHue(0.6, 0.1);
+						// this.filterByBrightness(currentMin, currentMax, 50);
 						this.render(sendFilteredCanvas);
 					});
 				});
