@@ -17,14 +17,15 @@
   },
   "homepage": "https://github.com/ProjectFP/Server",
   "dependencies": {
+    "bluebird": "^2.9.21",
+    "caman": "^4.1.2",
+    "canvas": "1.0.4",
     "express": "3.x",
     "formidable": "^1.0.16",
     "fs-extra": "^0.16.3",
-    "quickthumb": "0.0.11",
+    "lodash": "^3.4.0",
     "node-tesseract": "^0.2.6",
-    "caman": "^4.1.2",
-    "canvas": "1.0.4",
-    "lodash": "^3.4.0"
+    "quickthumb": "0.0.11"
   },
   "devDependencies": {
     "body-parser": "^1.12.2",
