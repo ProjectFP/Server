@@ -40,6 +40,10 @@
                 rgba.r = 255;
                 rgba.g = 255;
                 rgba.b = 255;
+              } else {
+                rgba.r = 0;
+                rgba.g = 0;
+                rgba.b = 0;
               }
             }
             return rgba;
@@ -62,7 +66,11 @@
               rgba.r = 255;
               rgba.g = 255;
               rgba.b = 255;
-            } 
+            } else {
+              rgba.r = 0;
+              rgba.g = 0;
+              rgba.b = 0;
+            }
 
             return rgba;
           });
@@ -80,6 +88,10 @@
               rgba.r = 255;
               rgba.g = 255;
               rgba.b = 255;
+            } else {
+              rgba.r = 0;
+              rgba.g = 0;
+              rgba.b = 0;
             }
             return rgba;
           });
@@ -96,6 +108,10 @@
               rgba.r = 240;
               rgba.g = 240;
               rgba.b = 240;
+            } else {
+              rgba.r = 0;
+              rgba.g = 0;
+              rgba.b = 0;
             }
 
             return rgba;

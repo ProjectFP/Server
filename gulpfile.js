@@ -3,6 +3,8 @@ var nodemon = require('gulp-nodemon');
 var jshint = require('gulp-jshint');
 var	sass = require('gulp-sass');
 var browserSync = require('browser-sync');
+var istanbul = require('gulp-istanbul');
+var mocha = require('gulp-mocha');
 
 var paths = {
 	browserSync : {
@@ -49,6 +51,17 @@ gulp.task('sass', function() {
 		.pipe(gulp.dest(paths.sass.dest));
 });
 
+gulp.task('test', function (cb) {
+  gulp.src(['lib/**/*.js', 'app.js'])
+    .pipe(istanbul()) // Covering files
+    .pipe(istanbul.hookRequire()) // Force `require` to return covered files
+    .on('finish', function () {
+      gulp.src(['test/*.js'])
+        .pipe(mocha())
+        .pipe(istanbul.writeReports()) // Creating the reports after tests runned
+        .on('end', cb);
+    });
+});
 
 gulp.task('dev', function(){
 	nodemon({ script: 'app.js', ext: 'html js', ignore: ['public/*'] });
