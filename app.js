@@ -10,14 +10,16 @@
 // });
 
 
-var express   = require('express'); // require express server
-var cors      = require('cors');
-var routes    = require('./lib/interfaces/rest/v1.0/routes');
-var qt        = require('quickthumb');
+var express    = require('express'); // require express server
+var cors       = require('cors');
+var routes     = require('./lib/interfaces/rest/v1.0/routes');
+var qt         = require('quickthumb');
+var bodyParser = require('body-parser');
 
 var app = express();
 app.use(cors());
 app.use(qt.static(__dirname + '/'));
+app.use(bodyParser());
 
 routes.connectRoutes(app);
 
