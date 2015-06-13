@@ -25,9 +25,9 @@ var app = express();
 app.use(cors());
 app.use(qt.static(__dirname + '/'));
 app.use(bodyParser());
-app.use(jwt({ 
-  secret: publicKey
-}).unless({path: ['/auth']}));
+// app.use(jwt({ 
+//   secret: publicKey
+// }).unless({path: ['/auth']}));
 
 routes.connectRoutes(app);
 
