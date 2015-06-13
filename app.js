@@ -17,7 +17,9 @@ var qt         = require('quickthumb');
 var bodyParser = require('body-parser');
 var jwt        = require('express-jwt');
 var fs         = require('fs');
-var publicKey  = fs.readFileSync('/pat/to/public.pub');
+// var publicKey  = fs.readFileSync('./public.pub');
+publicKey = "abcd";
+
 
 var app = express();
 app.use(cors());
