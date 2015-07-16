@@ -29,7 +29,8 @@
     "cors": "^2.5.3",
     "mongoose": "^4.0.2",
     "body-parser": "^1.12.3",
-    "express-jwt": "^3.0.1"
+    "express-jwt": "^3.0.1",
+    "jsonwebtoken": "^5.0.2"
   },
   "devDependencies": {
     "body-parser": "^1.12.2",

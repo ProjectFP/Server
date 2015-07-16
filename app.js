@@ -15,19 +15,25 @@ var cors       = require('cors');
 var routes     = require('./lib/interfaces/rest/v1.0/routes');
 var qt         = require('quickthumb');
 var bodyParser = require('body-parser');
-var jwt        = require('express-jwt');
+var expressJwt = require('express-jwt');
 var fs         = require('fs');
+var morgan     = require('morgan');
 // var publicKey  = fs.readFileSync('./public.pub');
-publicKey = "abcd";
+var publicKey = "abcd";
 
 
 var app = express();
+app.use(morgan('dev'));
 app.use(cors());
 app.use(qt.static(__dirname + '/'));
-app.use(bodyParser());
-// app.use(jwt({ 
-//   secret: publicKey
-// }).unless({path: ['/auth']}));
+// app.use(bodyParser());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.set('superSecret', publicKey);
+
+app.use(expressJwt({ 
+  secret: publicKey
+}).unless({path: ['/login', '/signup']})); 
 
 routes.connectRoutes(app);
 
