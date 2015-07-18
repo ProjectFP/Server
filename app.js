@@ -32,7 +32,7 @@ app.use(bodyParser.json());
 app.set('superSecret', publicKey);
 
 app.use(expressJwt({ 
-  secret: publicKey
+    secret: publicKey
 }).unless({path: ['/login', '/signup']})); 
 
 routes.connectRoutes(app);
