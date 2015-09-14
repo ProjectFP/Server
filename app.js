@@ -31,7 +31,7 @@ app.use(bodyParser.json());
 
 app.use(expressJwt({ 
     secret: config.SUPER_SECRET
-}).unless({path: ['/login', '/token', '/getToken']})); 
+}).unless({path: ['/login', '/token', '/getToken', '/adduser']})); 
 
 routes.connectRoutes(app);
 
